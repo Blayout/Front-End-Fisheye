@@ -25,7 +25,6 @@ function photographerTemplate(data) {
     return { id, name, picture, tagline, city, getUserCardDOM };
 }
 
-// Supposons que vous ayez une liste de données de photographes
 const photographersData = [
     {
         id: 1,
@@ -40,6 +39,7 @@ const photographersData = [
         portrait: "MimiKeel.jpg",
         tagline: "Voir le beau dans le quotidien",
         city: "London"
+        
     },
     {
         id: 3,
@@ -76,29 +76,21 @@ const photographersData = [
         tagline: "Toujours à la recherche de LA photo",
         city: "Berlin"
     }
-    // Ajoutez d'autres données de photographes selon votre besoin
 ];
 
-// Ajoutez le chemin de l'image à chaque photographe
 photographersData.forEach((photographer) => {
     photographer.portrait = `assets/photographers/${photographer.portrait}`;
 });
 
-// Maintenant, votre tableau photographersData contient le chemin complet de l'image pour chaque photographe
 console.log(photographersData);
 
 
-// Supposons que vous ayez une nouvelle div avec la classe "photographer_section"
 const photographerSection = document.querySelector('.photographer_section');
 
-// Boucle à travers les données des photographes et les ajoute au DOM
 photographersData.forEach((photographerData) => {
-    // Utilisez la fonction photographerTemplate pour créer un objet représentant un photographe
     const photographer = photographerTemplate(photographerData);
 
-    // Utilisez la méthode getUserCardDOM pour obtenir l'élément DOM représentant le photographe
     const photographerCard = photographer.getUserCardDOM();
 
-    // Ajoutez l'élément DOM à la section des photographes sur la page
     photographerSection.appendChild(photographerCard);
 });
