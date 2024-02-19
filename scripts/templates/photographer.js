@@ -15,7 +15,7 @@ function photographerTemplate(data) {
 
     const pCity = document.createElement("p");
     pCity.textContent = city;
-    pCity.style.color = "#901C1C";
+  
     pCity.style.margin = "0";
 
     const pTagline = document.createElement("p");
