@@ -16,3 +16,5 @@ getPhotographers()
   .catch((error) => {
     console.log("pas de photographe", error);
   });
+
+  
