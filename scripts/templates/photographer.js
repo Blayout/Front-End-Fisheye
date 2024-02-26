@@ -8,6 +8,11 @@ function photographerTemplate(data) {
     const img = document.createElement("img");
     img.setAttribute("src", picture);
 
+    const photographerLink = document.createElement("a");
+    photographerLink.href = `photographer.html?id=${id}`; // Rediriger vers photographer.html avec l'ID du photographe dans l'URL
+    photographerLink.textContent = name;
+    
+
     const h2 = document.createElement("h2");
     h2.textContent = name;
     h2.style.margin = "0";
@@ -28,7 +33,8 @@ function photographerTemplate(data) {
     pPrice.style.color = "#757575";
 
     article.appendChild(img);
-    article.appendChild(h2);
+    // article.appendChild(h2);
+    article.appendChild(photographerLink);
     article.appendChild(pCity);
     article.appendChild(pTagline);
     article.appendChild(pPrice); // Ajouter le paragraphe de prix
