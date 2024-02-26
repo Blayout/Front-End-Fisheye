@@ -11,7 +11,11 @@ function photographerTemplate(data) {
     const photographerLink = document.createElement("a");
     photographerLink.href = `photographer.html?id=${id}`; // Rediriger vers photographer.html avec l'ID du photographe dans l'URL
     photographerLink.textContent = name;
-    
+    photographerLink.style.margin = "0";
+    photographerLink.style.marginTop = "10px";
+    photographerLink.style.textDecoration = "none";
+    photographerLink.style.color = "#D3573C";
+    photographerLink.style.fontSize = "36px";
 
     const h2 = document.createElement("h2");
     h2.textContent = name;
